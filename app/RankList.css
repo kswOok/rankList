@@ -1,0 +1,89 @@
+.recipeItemLabel {
+    width: 100%;
+    height: 0;
+    padding-bottom: 62.5%;
+    background-color: black;
+    position: relative;
+}
+
+.recipeItemLabel div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.recipeItemLabel span {
+    display: block;
+    text-align: center;
+}
+
+.recipeItemLabel span.title {
+    color: white;
+    font-size: 22px;
+}
+
+.recipeItemLabel span.intro {
+    margin-top: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+}
+
+.recipeItemList {
+    padding-left: 15px;
+    padding-bottom: 27px;
+    padding-top: 10px;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    overflow: scroll;
+}
+
+.recipeItem {
+    width: auto;
+    height: auto;
+    max-width: 150px;
+    overflow: hidden;
+    padding-right: 10px;
+}
+
+.recipeItem img.recipeImage {
+    width: 150px;
+    height: 90px;
+}
+
+.recipeItem span.recipeTitle {
+    color: black;
+    margin-top: 12px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.recipeAuthor {
+    height: 18px;
+    display: -webkit-box;
+    margin-top: 10px;
+    overflow: hidden;
+    -webkit-box-align: center;
+    -webkit-box-orient: horizontal;
+}
+
+.recipeAuthor img.authorPhoto {
+    width: 18px;
+    height: 18px;
+    -webkit-border-radius: 9px 9px;
+}
+
+.recipeAuthor div.authorName {
+    width: 0;
+    -webkit-box-flex: 1;
+    margin-left: 7px;
+    color: black;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
