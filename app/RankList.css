@@ -22,6 +22,7 @@
 .recipeItemLabel span.title {
     color: white;
     font-size: 22px;
+    font-weight: bold;
 }
 
 .recipeItemLabel span.intro {
@@ -37,6 +38,7 @@
     display: -webkit-box;
     -webkit-box-orient: horizontal;
     overflow: scroll;
+    background-color: white;
 }
 
 .recipeItem {
@@ -87,3 +89,54 @@
     text-overflow: ellipsis;
 }
 
+.menuLargeItem div.title {
+    width: 100%;
+    height: auto;
+}
+
+.menuLists {
+    width: 100%;
+    height: auto;
+    overflow: scroll;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+
+.menuItem {
+    width: 270px;
+    height: 173px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    margin-right: 10px;
+}
+
+.label {
+    width: 100%;
+    height: 64px;
+    display: -webkit-box;
+    -webkit-box-align: center;
+}
+
+.label div.title {
+    font-size: 17px;
+    padding-left: 10px;
+    color: #000;
+    font-weight: bold;
+    width: auto;
+}
+
+.label div.more {
+    width: auto;
+    color: #FF6619;
+}
+
+.label img.iconArrowRight {
+    margin-left: 7px;
+    width: 7px;
+    padding-right: 10px;
+    height: 13px;
+}
