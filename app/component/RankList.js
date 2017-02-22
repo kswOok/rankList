@@ -4,6 +4,9 @@
 import React from 'react';
 import '../RankList.css'
 import arrowRight from '../ic_arrow_right.png';
+import userFirst from '../userFirst.png';
+import userSecond from '../userSecond.png';
+import userThird from '../userThird.png';
 
 export default class RankList extends React.Component {
 
@@ -17,91 +20,124 @@ export default class RankList extends React.Component {
                         "title": "优秀新菜品",
                         "intro": "昨日发布的优秀菜单 每日8:00更新",
                         "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                        "loadMoreUrl": "http://www.baidu.com",
                         "recipes": [{
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }]
-                    }, {
+                    },{
                         "title": "优秀新菜品",
                         "intro": "昨日发布的优秀菜单 每日8:00更新",
                         "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                        "loadMoreUrl": "http://www.baidu.com",
                         "recipes": [{
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }]
-                    }, {
+                    },{
                         "title": "优秀新菜品",
                         "intro": "昨日发布的优秀菜单 每日8:00更新",
                         "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                        "loadMoreUrl": "http://www.baidu.com",
                         "recipes": [{
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }, {
-                            "title": "牛肉饭",
-                            "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                            "userPhoto": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
-                            "userName": "康爸爸"
+                            "author_id": "7195201",
+                            "author_name": "宝宝辅食微课堂",
+                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                            "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }]
                     }],
                     "menus": [{
@@ -146,7 +182,27 @@ export default class RankList extends React.Component {
                         "a": {
                             "n": "菜单作者"
                         }
-                    },]
+                    },],
+                    "users": [
+                        {
+                            "nick": "康寿伟",
+                            "ws": "120",
+                            "cs": "240",
+                            "user_id": "123456",
+                            "user_photo": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
+                        }, {
+                            "nick": "康寿伟",
+                            "ws": "1207777",
+                            "cs": "2407777",
+                            "user_id": "123456",
+                            "user_photo": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
+                        }, {
+                            "nick": "康寿伟",
+                            "ws": "120",
+                            "cs": "240",
+                            "user_id": "123456",
+                            "user_photo": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
+                        }]
                 }
             }
         }
@@ -159,6 +215,7 @@ export default class RankList extends React.Component {
                     this.state.testData.result.list.map((item, index) => <RecipeLargeItem key={index} data={item}/>)
                 }
                 <MenuLargeItem menus={this.state.testData.result.menus}/>
+                <UserLargeItem users={this.state.testData.result.users}/>
             </div>
         );
     }
@@ -170,11 +227,10 @@ class RecipeLargeItem extends React.Component {
         return (
             <div>
                 <RecipeImageLabel title={this.props.data.title} intro={this.props.data.intro}/>
-                <RecipeItemList recipes={this.props.data.recipes}/>
+                <RecipeItemList recipes={this.props.data.recipes} loadMoreUrl={this.props.data.loadMoreUrl}/>
                 <div style={{height: "15px", backgroundColor: "#FAF9F7"}}></div>
             </div>
         );
-
     }
 }
 
@@ -187,11 +243,16 @@ class RecipeImageLabel extends React.Component {
                     <span className="title">{this.props.title}</span>
                     <span className="intro">{this.props.intro}</span>
                 </div>
-            </div>);
+            </div>
+        );
     }
 }
 
 class RecipeItemList extends React.Component {
+
+    loadMore() {
+        window.open(this.props.loadMoreUrl);
+    };
 
     render() {
         return (
@@ -201,7 +262,10 @@ class RecipeItemList extends React.Component {
                         (item, index) => <RecipeItem key={index} data={item}/>
                     )
                 }
-            </div>);
+                <div className="loadMore" onClick={this.loadMore.bind(this)}>查看<br/>更多</div>
+                <div style={{width:""}}></div>
+            </div>
+        );
     }
 }
 
@@ -210,24 +274,26 @@ class RecipeItem extends React.Component {
     render() {
         return (
             <div className="recipeItem">
-                <img className="recipeImage" src={this.props.data.image}/>
-                <span className="recipeTitle">{this.props.data.title}</span>
+                <img className="recipeImage" src={this.props.data.pic}/>
+                <span className="recipeTitle">{this.props.data.name}</span>
                 <div className="recipeAuthor">
-                    <img className="authorPhoto" src={this.props.data.userPhoto}/>
-                    <div className="authorName">{this.props.data.userName}</div>
+                    <img className="authorPhoto" src={this.props.data.author_pic}/>
+                    <div className="authorName">{this.props.data.author_name}</div>
                 </div>
-            </div>);
+            </div>
+        );
     }
 }
 
 class MenuItem extends React.Component {
     render() {
         return (
-            <div className="menuItem" style={{backgroundImage: "url("+(this.props.menu.b)+")"}}>
+            <div className="menuItem" style={{backgroundImage: "url(" + (this.props.menu.b) + ")"}}>
                 <div className="recipeCount">◆ {this.props.menu.c} 道菜谱 ◆</div>
                 <div className="name">{this.props.menu.t}</div>
                 <div className="authorName">{this.props.menu.a.n}</div>
-            </div>);
+            </div>
+        );
     }
 }
 
@@ -242,11 +308,65 @@ class MenuLargeItem extends React.Component {
                     <img className="iconArrowRight" src={arrowRight}/>
                 </div>
                 <div className="menuLists">
+                    <div style={{width: "15px", backgroundColor: "white"}}></div>
                     {
                         this.props.menus.map(
                             (item, index) => <MenuItem menu={item} key={index}/>)
                     }
+                    <div style={{width: "5px", backgroundColor: "white"}}></div>
                 </div>
-            </div>);
+                <div style={{height: "15px", backgroundColor: "#FAF9F7"}}></div>
+            </div>
+        );
+    }
+}
+
+class UserLargeItem extends React.Component {
+
+    render() {
+        return (
+            <div>
+                <div className="label">
+                    <div className="title">本周积分榜</div>
+                    <div className="titleMate">每周日11点公布</div>
+                    <div style={{WebkitBoxFlex: "1"}}></div>
+                    <div className="more">查看更多</div>
+                    <img className="iconArrowRight" src={arrowRight}/>
+                </div>
+                <div className="userLists">
+                    <UserItem user={this.props.users[0]} border={userSecond} width="66px" height="74px"/>
+                    <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
+                    <UserItem user={this.props.users[1] } border={userFirst} width="74px" height="83px"/>
+                    <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
+                    <UserItem user={this.props.users[2]} border={userThird} width="66px" height="74px"/>
+                </div>
+            </div>
+        );
+    }
+}
+
+class UserItem extends React.Component {
+
+    render() {
+        return (
+            <div className="userItem">
+                <div className="userPhoto"
+                     style={{
+                         width: this.props.width,
+                         height: this.props.height,
+                         backgroundImage: `url(${this.props.border})` + "," + `url(${this.props.user.user_photo})`,
+                         backgroundRepeat: "no-repeat,no-repeat",
+                         backgroundPosition: "center ,-4px 4px",
+                         backgroundSize: "cover,cover"
+                     }}>
+                </div>
+                <div className="name">{this.props.user.nick}</div>
+                <div className="score">{this.props.user.ws}</div>
+                <div className="scoreLabel">本周新增积分</div>
+                <div className="score">{this.props.user.cs}</div>
+                <div className="scoreLabel">总积分</div>
+                <div style={{height: "40px"}}></div>
+            </div>
+        );
     }
 }
