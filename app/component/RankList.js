@@ -57,7 +57,7 @@ export default class RankList extends React.Component {
                             "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
                             "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }]
-                    },{
+                    }, {
                         "title": "优秀新菜品",
                         "intro": "昨日发布的优秀菜单 每日8:00更新",
                         "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
@@ -98,7 +98,7 @@ export default class RankList extends React.Component {
                             "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
                             "video_url": "recipes://www.douguo.com/details?id=1514034"
                         }]
-                    },{
+                    }, {
                         "title": "优秀新菜品",
                         "intro": "昨日发布的优秀菜单 每日8:00更新",
                         "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
@@ -189,19 +189,19 @@ export default class RankList extends React.Component {
                             "ws": "120",
                             "cs": "240",
                             "user_id": "123456",
-                            "user_photo": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
+                            "user_photo": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
                         }, {
                             "nick": "康寿伟",
                             "ws": "1207777",
                             "cs": "2407777",
                             "user_id": "123456",
-                            "user_photo": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
+                            "user_photo": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
                         }, {
                             "nick": "康寿伟",
                             "ws": "120",
                             "cs": "240",
                             "user_id": "123456",
-                            "user_photo": "http://tx2.douguo.net/upload/photo/6/2/0/70_u70667821931004215053.jpg",
+                            "user_photo": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
                         }]
                 }
             }
@@ -263,7 +263,7 @@ class RecipeItemList extends React.Component {
                     )
                 }
                 <div className="loadMore" onClick={this.loadMore.bind(this)}>查看<br/>更多</div>
-                <div style={{width:""}}></div>
+                <div style={{width: ""}}></div>
             </div>
         );
     }
@@ -334,11 +334,11 @@ class UserLargeItem extends React.Component {
                     <img className="iconArrowRight" src={arrowRight}/>
                 </div>
                 <div className="userLists">
-                    <UserItem user={this.props.users[0]} border={userSecond} width="66px" height="74px"/>
+                    <UserItem user={this.props.users[0]} border={userSecond} large={false}/>
                     <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
-                    <UserItem user={this.props.users[1] } border={userFirst} width="74px" height="83px"/>
+                    <UserItem user={this.props.users[1] } border={userFirst} large={true}/>
                     <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
-                    <UserItem user={this.props.users[2]} border={userThird} width="66px" height="74px"/>
+                    <UserItem user={this.props.users[2]} border={userThird} large={false}/>
                 </div>
             </div>
         );
@@ -352,8 +352,8 @@ class UserItem extends React.Component {
             <div className="userItem">
                 <div className="userPhoto"
                      style={{
-                         width: this.props.width,
-                         height: this.props.height,
+                         width: this.props.large ? "74px" : "66px",
+                         height: this.props.large ? "83px" : "74px",
                          backgroundImage: `url(${this.props.border})` + "," + `url(${this.props.user.user_photo})`,
                          backgroundRepeat: "no-repeat,no-repeat",
                          backgroundPosition: "center ,-4px 4px",
