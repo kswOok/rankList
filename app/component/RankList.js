@@ -2,6 +2,7 @@
  * Created by kswook on 18/02/2017.
  */
 import React from 'react';
+import '../douguo.js';
 import '../RankList.css'
 import arrowRight from '../ic_arrow_right.png';
 import userFirst from '../userFirst.png';
@@ -13,209 +14,228 @@ export default class RankList extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            testData: {
-                "state": "success",
-                "result": {
-                    "list": [{
-                        "title": "优秀新菜品",
-                        "intro": "昨日发布的优秀菜单 每日8:00更新",
-                        "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                        "loadMoreUrl": "http://www.baidu.com",
-                        "recipes": [{
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }]
+            result: {
+                "list": [{
+                    "title": "优秀新菜品",
+                    "intro": "昨日发布的优秀菜单 每日8:00更新",
+                    "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                    "loadMoreUrl": "http://www.baidu.com",
+                    "recipes": [{
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
                     }, {
-                        "title": "优秀新菜品",
-                        "intro": "昨日发布的优秀菜单 每日8:00更新",
-                        "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                        "loadMoreUrl": "http://www.baidu.com",
-                        "recipes": [{
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }]
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
                     }, {
-                        "title": "优秀新菜品",
-                        "intro": "昨日发布的优秀菜单 每日8:00更新",
-                        "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                        "loadMoreUrl": "http://www.baidu.com",
-                        "recipes": [{
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }, {
-                            "author_id": "7195201",
-                            "author_name": "宝宝辅食微课堂",
-                            "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                            "name": "卡通蒸蛋糕 宝宝辅食微课堂",
-                            "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
-                            "video_url": "recipes://www.douguo.com/details?id=1514034"
-                        }]
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }]
+                }, {
+                    "title": "优秀新菜品",
+                    "intro": "昨日发布的优秀菜单 每日8:00更新",
+                    "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                    "loadMoreUrl": "http://www.baidu.com",
+                    "recipes": [{
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }]
+                }, {
+                    "title": "优秀新菜品",
+                    "intro": "昨日发布的优秀菜单 每日8:00更新",
+                    "image": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                    "more_url": "http://www.baidu.com",
+                    "recipes": [{
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }, {
+                        "author_id": "7195201",
+                        "author_name": "宝宝辅食微课堂",
+                        "author_pic": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
+                        "name": "卡通蒸蛋糕 宝宝辅食微课堂",
+                        "pic": "http://cp1.douguo.net/upload/caiku/3/3/e/500x300_3310617907f32e11a7d24c4a403968ce.jpg",
+                        "video_url": "recipes://www.douguo.com/details?id=1514034"
+                    }]
+                }],
+                "menus": [{
+                    "c": 100,
+                    "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                    "t": "菜单标题",
+                    "a": {
+                        "n": "菜单作者"
+                    }
+                }, {
+                    "c": 100,
+                    "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                    "t": "菜单标题",
+                    "a": {
+                        "n": "菜单作者"
+                    }
+                }, {
+                    "c": 100,
+                    "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                    "t": "菜单标题",
+                    "a": {
+                        "n": "菜单作者"
+                    }
+                }, {
+                    "c": 100,
+                    "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                    "t": "菜单标题",
+                    "a": {
+                        "n": "菜单作者"
+                    }
+                }, {
+                    "c": 100,
+                    "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                    "t": "菜单标题",
+                    "a": {
+                        "n": "菜单作者"
+                    }
+                }, {
+                    "c": 100,
+                    "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
+                    "t": "菜单标题",
+                    "a": {
+                        "n": "菜单作者"
+                    }
+                }],
+                "menus_url": "http://www.baidu.com",
+                "users": [
+                    {
+                        "name": "康寿伟",
+                        "weekscore": "120",
+                        "totalscore": "240",
+                        "id": "123456",
+                        "photo": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg"
+                    }, {
+                        "name": "康寿伟",
+                        "weekscore": "120",
+                        "totalscore": "240",
+                        "id": "123456",
+                        "photo": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg"
+                    }, {
+                        "name": "康寿伟",
+                        "weekscore": "120",
+                        "totalscore": "240",
+                        "id": "123456",
+                        "photo": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg"
                     }],
-                    "menus": [{
-                        "c": 100,
-                        "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                        "t": "菜单标题",
-                        "a": {
-                            "n": "菜单作者"
-                        }
-                    }, {
-                        "c": 100,
-                        "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                        "t": "菜单标题",
-                        "a": {
-                            "n": "菜单作者"
-                        }
-                    }, {
-                        "c": 100,
-                        "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                        "t": "菜单标题",
-                        "a": {
-                            "n": "菜单作者"
-                        }
-                    }, {
-                        "c": 100,
-                        "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                        "t": "菜单标题",
-                        "a": {
-                            "n": "菜单作者"
-                        }
-                    }, {
-                        "c": 100,
-                        "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                        "t": "菜单标题",
-                        "a": {
-                            "n": "菜单作者"
-                        }
-                    }, {
-                        "c": 100,
-                        "b": "http://i2.douguo.net/upload/caiku/2/0/a/300_20a86e450767002fed606bf895eefb1a.jpg",
-                        "t": "菜单标题",
-                        "a": {
-                            "n": "菜单作者"
-                        }
-                    },],
-                    "users": [
-                        {
-                            "nick": "康寿伟",
-                            "ws": "120",
-                            "cs": "240",
-                            "user_id": "123456",
-                            "user_photo": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                        }, {
-                            "nick": "康寿伟",
-                            "ws": "1207777",
-                            "cs": "2407777",
-                            "user_id": "123456",
-                            "user_photo": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                        }, {
-                            "nick": "康寿伟",
-                            "ws": "120",
-                            "cs": "240",
-                            "user_id": "123456",
-                            "user_photo": "http://tx2.douguo.net/upload/photo/4/c/f/70_u1692310349721143629.jpg",
-                        }]
-                }
+                "users_url": "http://www.baidu.com"
             }
         }
+    }
+
+    componentWillMount() {
+        window.DouguoJSBridge.jsApi.accessInterface
+        ("http://api.qa.douguo.net/ranking/recommend", {}, function (result) {
+            this.setState({result: result.result})
+        }.bind(this));
+    }
+
+    componentWillUnmount() {
+
+    }
+
+    getRecipeList() {
+        if (this.state.result.list == null) {
+            return (
+                <div></div>
+            );
+        }
+        return (
+            this.state.result.list.map((item, index) => <RecipeLargeItem key={index} data={item}/>)
+        );
     }
 
     render() {
         return (
             <div className="rankList">
-                {
-                    this.state.testData.result.list.map((item, index) => <RecipeLargeItem key={index} data={item}/>)
-                }
-                <MenuLargeItem menus={this.state.testData.result.menus}/>
-                <UserLargeItem users={this.state.testData.result.users}/>
+                {this.getRecipeList()}
+                <MenuLargeItem menus={this.state.result.menus} loadMoreUrl={this.state.result.menus_url}/>
+                <UserLargeItem users={this.state.result.users} loadMoreUrl={this.state.result.users_url}/>
             </div>
         );
     }
@@ -226,7 +246,8 @@ class RecipeLargeItem extends React.Component {
     render() {
         return (
             <div>
-                <RecipeImageLabel title={this.props.data.title} intro={this.props.data.intro}/>
+                <RecipeImageLabel title={this.props.data.title} intro={this.props.data.intro}
+                                  image={this.props.data.image} loadMoreUrl={this.props.data.loadMoreUrl}/>
                 <RecipeItemList recipes={this.props.data.recipes} loadMoreUrl={this.props.data.loadMoreUrl}/>
                 <div style={{height: "15px", backgroundColor: "#FAF9F7"}}></div>
             </div>
@@ -235,10 +256,14 @@ class RecipeLargeItem extends React.Component {
 }
 
 class RecipeImageLabel extends React.Component {
+    loadMore() {
+        window.open(this.props.loadMoreUrl);
+    };
 
     render() {
         return (
-            <div className="recipeItemLabel">
+            <div className="recipeItemLabel" style={{backgroundImage: "url(" + (this.props.image) + ")"}}
+                 onClick={this.loadMore.bind(this)}>
                 <div className="recipeItemContent">
                     <span className="title">{this.props.title}</span>
                     <span className="intro">{this.props.intro}</span>
@@ -251,17 +276,22 @@ class RecipeImageLabel extends React.Component {
 class RecipeItemList extends React.Component {
 
     loadMore() {
-        window.open(this.props.loadMoreUrl);
+        // window.open(this.props.loadMoreUrl);
+        window.open("recipes://www.douguo.com/web?url=http://192.168.2.90");
     };
+
+
+    getRecipes() {
+        if (this.props.recipes != null) {
+            return (this.props.recipes).map(
+                (item, index) => <RecipeItem key={index} data={item}/>)
+        }
+    }
 
     render() {
         return (
             <div className="recipeItemList">
-                {
-                    (this.props.recipes).map(
-                        (item, index) => <RecipeItem key={index} data={item}/>
-                    )
-                }
+                {this.getRecipes()}
                 <div className="loadMore" onClick={this.loadMore.bind(this)}>查看<br/>更多</div>
                 <div style={{width: ""}}></div>
             </div>
@@ -298,10 +328,22 @@ class MenuItem extends React.Component {
 }
 
 class MenuLargeItem extends React.Component {
+
+    getMenus() {
+        if (this.props.menus != null) {
+            return ( this.props.menus.map(
+                (item, index) => <MenuItem menu={item} key={index}/>))
+        }
+    }
+
+    loadMore() {
+        window.open(this.props.loadMoreUrl);
+    }
+
     render() {
         return (
             <div className="menuLargeItem">
-                <div className="label">
+                <div className="label" onClick={this.loadMore.bind(this)}>
                     <div className="title">精品菜单</div>
                     <div style={{WebkitBoxFlex: "1"}}></div>
                     <div className="more">查看更多</div>
@@ -309,10 +351,7 @@ class MenuLargeItem extends React.Component {
                 </div>
                 <div className="menuLists">
                     <div style={{width: "15px", backgroundColor: "white"}}></div>
-                    {
-                        this.props.menus.map(
-                            (item, index) => <MenuItem menu={item} key={index}/>)
-                    }
+                    {this.getMenus()}
                     <div style={{width: "5px", backgroundColor: "white"}}></div>
                 </div>
                 <div style={{height: "15px", backgroundColor: "#FAF9F7"}}></div>
@@ -347,6 +386,10 @@ class UserLargeItem extends React.Component {
 
 class UserItem extends React.Component {
 
+    getUserInfo() {
+        window.open(this.props.loadMoreUrl);
+    }
+
     render() {
         return (
             <div className="userItem">
@@ -354,16 +397,16 @@ class UserItem extends React.Component {
                      style={{
                          width: this.props.large ? "74px" : "66px",
                          height: this.props.large ? "83px" : "74px",
-                         backgroundImage: `url(${this.props.border})` + "," + `url(${this.props.user.user_photo})`,
+                         backgroundImage: `url(${this.props.border})` + "," + `url(${this.props.user.photo})`,
                          backgroundRepeat: "no-repeat,no-repeat",
                          backgroundPosition: "center ,-4px 4px",
                          backgroundSize: "cover,cover"
                      }}>
                 </div>
-                <div className="name">{this.props.user.nick}</div>
-                <div className="score">{this.props.user.ws}</div>
+                <div className="name">{this.props.user.name}</div>
+                <div className="score">{this.props.user.weekscore}</div>
                 <div className="scoreLabel">本周新增积分</div>
-                <div className="score">{this.props.user.cs}</div>
+                <div className="score">{this.props.user.totalscore}</div>
                 <div className="scoreLabel">总积分</div>
                 <div style={{height: "40px"}}></div>
             </div>
