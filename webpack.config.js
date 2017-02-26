@@ -1,11 +1,30 @@
-var path = require('path');
+const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const pathResolve = (p) => path.resolve(__dirname, p);
 
 module.exports = {
-    entry: path.resolve(__dirname, 'app/app.js'),
-    output: {
-        path: path.resolve(__dirname, 'build'),
-        filename: 'bundle.js'
+    entry: {
+        rankList: pathResolve('./app/pages/rankList.js'),
+        userList: pathResolve('./app/pages/userList.js')
     },
+    output: {
+        path: pathResolve('./dist'),
+        filename: '[name].js'
+    },
+    plugins: [
+        new HTMLWebpackPlugin({
+            filename: 'rankList.html',
+            template: 'templates/rankList.html',
+            inject: true,
+            chunks: ['rankList']
+        }),
+        new HTMLWebpackPlugin({
+            filename: 'userList.html',
+            template: 'templates/userList.html',
+            inject: true,
+            chunks: ['userList']
+        })
+    ],
     module: {
         loaders: [
             {

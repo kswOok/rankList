@@ -4,7 +4,7 @@
 
 import React from 'react';
 import {render} from 'react-dom';
-import RankList from './component/RankList.js'
-import './app.css'
+import '../app.css'
+import RankList from '../component/RankList.js'
 
 render(<RankList/>, document.getElementById('content'));

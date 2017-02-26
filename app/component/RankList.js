@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import '../douguo.js';
-import '../RankList.css'
+import '../RankList.css';
 import arrowRight from '../ic_arrow_right.png';
 import userFirst from '../userFirst.png';
 import userSecond from '../userSecond.png';
@@ -301,9 +301,13 @@ class RecipeItemList extends React.Component {
 
 class RecipeItem extends React.Component {
 
+    getRecipeInfo() {
+        window.open(this.props.data.video_url);
+    }
+
     render() {
         return (
-            <div className="recipeItem">
+            <div className="recipeItem" onClick={this.getRecipeInfo.bind(this)}>
                 <img className="recipeImage" src={this.props.data.pic}/>
                 <span className="recipeTitle">{this.props.data.name}</span>
                 <div className="recipeAuthor">
@@ -316,10 +320,19 @@ class RecipeItem extends React.Component {
 }
 
 class MenuItem extends React.Component {
+
+    getMenuInfo() {
+        window.open("recipes://www.douguo.com/menu?id=" + this.props.menu.id);
+    }
+
     render() {
         return (
-            <div className="menuItem" style={{backgroundImage: "url(" + (this.props.menu.b) + ")"}}>
-                <div className="recipeCount">◆ {this.props.menu.c} 道菜谱 ◆</div>
+            <div className="menuItem" onClick={this.getMenuInfo.bind(this)}
+                 style={{backgroundImage: "url(" + (this.props.menu.b) + ")"}}>
+                <div className="recipeCount">
+                    <span style={{display: "block", fontSize: "6px", marginRight: "5px"}}>◆</span>
+                    {this.props.menu.c}道菜谱
+                    <span style={{display: "block", fontSize: "6px", marginLeft: "5px"}}>◆</span></div>
                 <div className="name">{this.props.menu.t}</div>
                 <div className="authorName">{this.props.menu.a.n}</div>
             </div>
@@ -361,11 +374,14 @@ class MenuLargeItem extends React.Component {
 }
 
 class UserLargeItem extends React.Component {
+    getUsers() {
+        window.open(this.props.loadMoreUrl);
+    }
 
     render() {
         return (
             <div>
-                <div className="label">
+                <div className="label" onClick={this.getUsers.bind(this)}>
                     <div className="title">本周积分榜</div>
                     <div className="titleMate">每周日11点公布</div>
                     <div style={{WebkitBoxFlex: "1"}}></div>
@@ -387,12 +403,12 @@ class UserLargeItem extends React.Component {
 class UserItem extends React.Component {
 
     getUserInfo() {
-        window.open(this.props.loadMoreUrl);
+        window.open("recipes://www.douguo.com/user?id=" + this.props.user.id);
     }
 
     render() {
         return (
-            <div className="userItem">
+            <div className="userItem" onClick={this.getUserInfo.bind(this)}>
                 <div className="userPhoto"
                      style={{
                          width: this.props.large ? "74px" : "66px",
