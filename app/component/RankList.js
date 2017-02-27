@@ -277,7 +277,7 @@ class RecipeItemList extends React.Component {
 
     loadMore() {
         // window.open(this.props.loadMoreUrl);
-        window.open("recipes://www.douguo.com/web?url=http://192.168.2.90");
+        window.open("recipes://www.douguo.com/web?url=http://192.168.2.227/userList.html");
     };
 
 

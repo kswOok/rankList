@@ -8,6 +8,8 @@
     margin-top: 23px;
     margin-bottom: 23px;
     display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
 }
 
 .userListItem {
@@ -25,10 +27,16 @@
     width: 50px;
     height: 50px;
     -webkit-border-radius: 50% 50%;
+    overflow: hidden;
+}
+
+.userListItem div.nickContainer {
+    margin-left: 10px;
 }
 
 .userListItem div.userName {
-
+    font-size: 16px;
+    color: black;
 }
 
 .userListItem div.weekScore {
@@ -38,10 +46,28 @@
     margin-bottom: 7px;
 }
 
-.userListItem div.totalScore {
-    color: #FF6619;
-    font-size: 18px;
+.userListItem span.totalScore {
+    margin-top: 10px;
+    font-size: 14px;
     font-family: douguoDIN, Verdana, sans-serif;
     margin-bottom: 7px;
 }
 
+.scoreLabel {
+    display: -webkit-box;
+    -webkit-box-align: inherit;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.scoreLabel div.more {
+    color: #FF6619;
+    font-size: 14px;
+}
+
+.indexUser {
+    width: 40px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
