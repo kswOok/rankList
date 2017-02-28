@@ -26,7 +26,7 @@ export default class RankList extends React.Component {
 
     componentWillMount() {
         window.DouguoJSBridge.jsApi.accessInterface
-        ("http://api.qa.douguo.net/ranking/recommend", {}, function (result) {
+        ("http://api.douguo.net/ranking/recommend", {}, function (result) {
             this.setState({result: result.result})
         }.bind(this));
     }
@@ -59,8 +59,8 @@ class RecipeLargeItem extends React.Component {
         return (
             <div>
                 <RecipeImageLabel title={this.props.data.title} intro={this.props.data.intro}
-                                  image={this.props.data.image} loadMoreUrl={this.props.data.loadMoreUrl}/>
-                <RecipeItemList recipes={this.props.data.recipes} loadMoreUrl={this.props.data.loadMoreUrl}/>
+                                  image={this.props.data.image} loadMoreUrl={this.props.data.more_url}/>
+                <RecipeItemList recipes={this.props.data.recipes} loadMoreUrl={this.props.data.more_url}/>
                 <div style={{height: "15px", backgroundColor: "#FAF9F7"}}></div>
             </div>
         );
@@ -185,7 +185,7 @@ class MenuLargeItem extends React.Component {
 }
 
 class UserLargeItem extends React.Component {
-    getUsers() {
+    loadMore() {
         window.open(this.props.loadMoreUrl);
     }
 
@@ -204,7 +204,7 @@ class UserLargeItem extends React.Component {
     render() {
         return (
             <div>
-                <div className="label" onClick={this.getUsers.bind(this)}>
+                <div className="label" onClick={this.loadMore.bind(this)}>
                     <div className="title">本周积分榜</div>
                     <div className="titleMate">每周日11点公布</div>
                     <div style={{WebkitBoxFlex: "1"}}></div>
