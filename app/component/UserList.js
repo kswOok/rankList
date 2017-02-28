@@ -195,6 +195,7 @@ export default class UserList extends React.Component {
                     <div className="more" style={{marginLeft: "7px"}}>如何获取积分？</div>
                     <div style={{WebkitBoxFlex: "1"}}></div>
                 </div>
+                <div style={{height: "1px", width: "100%", backgroundColor: "#E5E3DF"}}></div>
                 {this.getUserList()}
             </div>
         );
@@ -268,18 +269,21 @@ class UserItem extends React.Component {
 
     render() {
         return (
-            <div className="userListItem" onClick={this.getUserInfo.bind(this)}>
-                {this.getRankNumber()}
-                {this.getUserPhoto()}
-                <div className="nickContainer">
-                    <div className="userName">{this.props.user.name}</div>
-                    <div style={{fontSize: "12px", color: "#999999"}}>
-                        总积分 <span className="totalScore">{this.props.user.totalscore}</span>
+            <div>
+                <div className="userListItem" onClick={this.getUserInfo.bind(this)}>
+                    {this.getRankNumber()}
+                    {this.getUserPhoto()}
+                    <div className="nickContainer">
+                        <div className="userName">{this.props.user.name}</div>
+                        <div style={{fontSize: "12px", color: "#999999"}}>
+                            总积分 <span className="totalScore">{this.props.user.totalscore}</span>
+                        </div>
                     </div>
+                    <div style={{WebkitBoxFlex: "1"}}></div>
+                    <div className="weekScore">{this.props.user.weekscore}</div>
+                    <div style={{width: "15px"}}></div>
                 </div>
-                <div style={{WebkitBoxFlex: "1"}}></div>
-                <div className="weekScore">{this.props.user.weekscore}</div>
-                <div style={{width: "15px"}}></div>
+                <div style={{height: "1px", width: "100%", backgroundColor: "#E5E3DF"}}></div>
             </div>);
     }
 

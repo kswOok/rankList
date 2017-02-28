@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const pathResolve = (p) => path.resolve(__dirname, p);
 
@@ -23,6 +24,12 @@ module.exports = {
             template: 'templates/userList.html',
             inject: true,
             chunks: ['userList']
+        })
+        ,
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
         })
     ],
     module: {
