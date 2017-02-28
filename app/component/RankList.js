@@ -31,29 +31,25 @@ export default class RankList extends React.Component {
         }.bind(this));
     }
 
-    componentWillUnmount() {
-
-    }
-
     getRecipeList() {
-        if (this.state.result.list == null) {
-            return (
-                <div></div>
-            );
-        }
         return (
             this.state.result.list.map((item, index) => <RecipeLargeItem key={index} data={item}/>)
         );
     }
 
     render() {
-        return (
-            <div className="rankList">
-                {this.getRecipeList()}
-                <MenuLargeItem menus={this.state.result.menus} loadMoreUrl={this.state.result.menus_url}/>
-                <UserLargeItem users={this.state.result.users} loadMoreUrl={this.state.result.users_url}/>
-            </div>
-        );
+        if (this.state.result.list.length > 0) {
+            return (
+                <div className="rankList">
+                    {this.getRecipeList()}
+                    <MenuLargeItem menus={this.state.result.menus} loadMoreUrl={this.state.result.menus_url}/>
+                    <UserLargeItem users={this.state.result.users} loadMoreUrl={this.state.result.users_url}/>
+                </div>
+            );
+        } else {
+            return (<div></div>);
+        }
+
     }
 }
 
@@ -193,6 +189,18 @@ class UserLargeItem extends React.Component {
         window.open(this.props.loadMoreUrl);
     }
 
+    getUsers() {
+        return (
+            <div className="userLists">
+                <UserItem user={this.props.users[0]} border={userSecond} large={false}/>
+                <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
+                <UserItem user={this.props.users[1] } border={userFirst} large={true}/>
+                <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
+                <UserItem user={this.props.users[2]} border={userThird} large={false}/>
+            </div>
+        );
+    }
+
     render() {
         return (
             <div>
@@ -203,13 +211,7 @@ class UserLargeItem extends React.Component {
                     <div className="more">查看更多</div>
                     <img className="iconArrowRight" src={arrowRight}/>
                 </div>
-                <div className="userLists">
-                    <UserItem user={this.props.users[0]} border={userSecond} large={false}/>
-                    <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
-                    <UserItem user={this.props.users[1] } border={userFirst} large={true}/>
-                    <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
-                    <UserItem user={this.props.users[2]} border={userThird} large={false}/>
-                </div>
+                {this.getUsers()}
             </div>
         );
     }
@@ -222,25 +224,30 @@ class UserItem extends React.Component {
     }
 
     render() {
-        return (
-            <div className="userItem" onClick={this.getUserInfo.bind(this)}>
-                <div className="userPhoto"
-                     style={{
-                         width: this.props.large ? "74px" : "66px",
-                         height: this.props.large ? "83px" : "74px",
-                         backgroundImage: `url(${this.props.border})` + "," + `url(${this.props.user.photo})`,
-                         backgroundRepeat: "no-repeat,no-repeat",
-                         backgroundPosition: "center ,-4px 4px",
-                         backgroundSize: "cover,cover"
-                     }}>
+        if (this.props.user == null) {
+            return (<div></div>);
+        } else {
+            return (
+                <div className="userItem" onClick={this.getUserInfo.bind(this)}>
+                    <div className="userPhoto"
+                         style={{
+                             width: this.props.large ? "74px" : "66px",
+                             height: this.props.large ? "83px" : "74px",
+                             backgroundImage: `url(${this.props.border})` + "," + `url(${this.props.user.photo})`,
+                             backgroundRepeat: "no-repeat,no-repeat",
+                             backgroundPosition: "center ,-4px 4px",
+                             backgroundSize: "cover,cover"
+                         }}>
+                    </div>
+                    <div className="name">{this.props.user.name}</div>
+                    <div className="score">{this.props.user.weekscore}</div>
+                    <div className="scoreLabel">本周新增积分</div>
+                    <div className="score">{this.props.user.totalscore}</div>
+                    <div className="scoreLabel">总积分</div>
+                    <div style={{height: "40px"}}></div>
                 </div>
-                <div className="name">{this.props.user.name}</div>
-                <div className="score">{this.props.user.weekscore}</div>
-                <div className="scoreLabel">本周新增积分</div>
-                <div className="score">{this.props.user.totalscore}</div>
-                <div className="scoreLabel">总积分</div>
-                <div style={{height: "40px"}}></div>
-            </div>
-        );
+            );
+        }
+
     }
 }

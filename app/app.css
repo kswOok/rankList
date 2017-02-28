@@ -1,6 +1,6 @@
 @font-face {
     font-family: douguoDIN;
-    src: url("./DIN-Regular.otf") format("opentype");
+    src: url("./typeface/DIN-Regular.otf") format("opentype");
 }
 
 body {
