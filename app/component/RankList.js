@@ -121,7 +121,7 @@ class RecipeItem extends React.Component {
     render() {
         return (
             <div className="recipeItem" onClick={this.getRecipeInfo.bind(this)}>
-                <img className="recipeImage" src={this.props.data.pic}/>
+                <img className="recipeImage" style={{backgroundImage: "url(" + (this.props.data.pic) + ")"}}/>
                 <span className="recipeTitle">{this.props.data.name}</span>
                 <div className="recipeAuthor">
                     <img className="authorPhoto" src={this.props.data.author_pic}/>
@@ -188,7 +188,7 @@ class MenuLargeItem extends React.Component {
 
 class UserLargeItem extends React.Component {
     loadMore() {
-        window.open(this.props.loadMoreUrl);
+        window.open("recipes://www.douguo.com/web?url=" + this.props.loadMoreUrl);
     }
 
     getUsers() {

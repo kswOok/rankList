@@ -54,6 +54,7 @@
 .recipeItem img.recipeImage {
     width: 150px;
     height: 90px;
+    background-size: cover;
 }
 
 .recipeItem span.recipeTitle {
@@ -114,6 +115,7 @@
     -webkit-box-align: center;
     -webkit-box-pack: center;
     margin-right: 10px;
+    background-size: cover;
 }
 
 .menuItem div {
@@ -187,6 +189,7 @@
     -webkit-box-pack: center;
     -webkit-box-orient: vertical;
     -webkit-box-align: center;
+    overflow: hidden;
 }
 
 .userItem div.name {
