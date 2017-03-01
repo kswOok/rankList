@@ -6,7 +6,8 @@ const pathResolve = (p) => path.resolve(__dirname, p);
 module.exports = {
     entry: {
         rankList: pathResolve('./app/pages/rankList.js'),
-        userList: pathResolve('./app/pages/userList.js')
+        userList: pathResolve('./app/pages/userList.js'),
+        index: pathResolve('./app/pages/index.js')
     },
     output: {
         path: pathResolve('./dist'),
@@ -24,6 +25,13 @@ module.exports = {
             template: 'templates/userList.html',
             inject: true,
             chunks: ['userList']
+        })
+        ,
+        new HTMLWebpackPlugin({
+            filename: 'index.html',
+            template: 'templates/index.html',
+            inject: true,
+            chunks: ['index']
         })
         ,
         new webpack.optimize.UglifyJsPlugin({
