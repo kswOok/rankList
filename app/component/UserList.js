@@ -27,6 +27,8 @@ export default class UserList extends React.Component {
         window.DouguoJSBridge.jsApi.accessInterface
         ("http://api.douguo.net/ranking/user", {}, function (result) {
             this.setState({users: result.result.users})
+        }.bind(this),function (error) {
+            DouguoJSBridge.jsApi.toast(error.message);
         }.bind(this));
     }
 

@@ -28,6 +28,8 @@ export default class RankList extends React.Component {
         window.DouguoJSBridge.jsApi.accessInterface
         ("http://api.douguo.net/ranking/recommend", {}, function (result) {
             this.setState({result: result.result})
+        }.bind(this),function (error) {
+            DouguoJSBridge.jsApi.toast(error.message);
         }.bind(this));
     }
 
