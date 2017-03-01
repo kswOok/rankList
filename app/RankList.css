@@ -24,12 +24,14 @@
     color: white;
     font-size: 22px;
     font-weight: bold;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.80);
 }
 
 .recipeItemLabel span.intro {
     margin-top: 13px;
-    color: rgba(255, 255, 255, 0.8);
+    color: white;
     font-size: 15px;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.80);
 }
 
 .recipeItemList {
@@ -51,7 +53,7 @@
     padding-right: 10px;
 }
 
-.recipeItem img.recipeImage {
+.recipeItem div.recipeImage {
     width: 150px;
     height: 90px;
     background-size: cover;
@@ -78,7 +80,7 @@
 .recipeAuthor img.authorPhoto {
     width: 18px;
     height: 18px;
-    -webkit-border-radius: 50% 50% ;
+    -webkit-border-radius: 50% 50%;
 }
 
 .recipeAuthor div.authorName {

@@ -28,7 +28,7 @@ export default class RankList extends React.Component {
         window.DouguoJSBridge.jsApi.accessInterface
         ("http://api.douguo.net/ranking/recommend", {}, function (result) {
             this.setState({result: result.result})
-        }.bind(this),function (error) {
+        }.bind(this), function (error) {
             DouguoJSBridge.jsApi.toast(error.message);
         }.bind(this));
     }
@@ -121,7 +121,7 @@ class RecipeItem extends React.Component {
     render() {
         return (
             <div className="recipeItem" onClick={this.getRecipeInfo.bind(this)}>
-                <img className="recipeImage" style={{backgroundImage: "url(" + (this.props.data.pic) + ")"}}/>
+                <div className="recipeImage" style={{backgroundImage: "url(" + (this.props.data.pic) + ")"}}></div>
                 <span className="recipeTitle">{this.props.data.name}</span>
                 <div className="recipeAuthor">
                     <img className="authorPhoto" src={this.props.data.author_pic}/>
@@ -194,9 +194,9 @@ class UserLargeItem extends React.Component {
     getUsers() {
         return (
             <div className="userLists">
-                <UserItem user={this.props.users[0]} border={userSecond} large={false}/>
+                <UserItem user={this.props.users[1]} border={userSecond} large={false}/>
                 <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
-                <UserItem user={this.props.users[1] } border={userFirst} large={true}/>
+                <UserItem user={this.props.users[0] } border={userFirst} large={true}/>
                 <div style={{width: "2px", backgroundColor: "#ffffff"}}></div>
                 <UserItem user={this.props.users[2]} border={userThird} large={false}/>
             </div>
@@ -237,8 +237,8 @@ class UserItem extends React.Component {
                              height: this.props.large ? "83px" : "74px",
                              backgroundImage: `url(${this.props.border})` + "," + `url(${this.props.user.photo})`,
                              backgroundRepeat: "no-repeat,no-repeat",
-                             backgroundPosition: "center ,center",
-                             backgroundSize: "cover,95% 95%",
+                             backgroundPosition: "center ,center bottom",
+                             backgroundSize: "cover,85% 85%",
                              overflow: "hidden"
                          }}>
                     </div>
