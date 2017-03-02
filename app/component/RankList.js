@@ -237,7 +237,7 @@ class UserItem extends React.Component {
                              height: this.props.large ? "83px" : "74px",
                              backgroundImage: `url(${this.props.border})` + "," + `url(${this.props.user.photo})`,
                              backgroundRepeat: "no-repeat,no-repeat",
-                             backgroundPosition: "center ,center bottom",
+                             backgroundPosition: "center bottom,center 88%",
                              backgroundSize: "cover,85% 85%",
                              overflow: "hidden"
                          }}>
